@@ -52,7 +52,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap(#roadmap)
+* [Roadmap](#roadmap)
 * [License](#license)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -71,9 +71,11 @@ Mental health is important. I will be adding a more detailed paragraph here, wit
 
 ### Built With
 
+With a lot of love 💖 and [Python](https://www.python.org/) 🐍, using:
+
 * [Tensorflow](https://www.tensorflow.org/) <img src="https://www.gstatic.com/devrel-devsite/prod/v9d570efc814a28024c8ff149d6de123f7f820fa81162ad936a6bcae349b1b74d/tensorflow/images/favicon.png" width="15">
 * [Flask](https://www.palletsprojects.com/p/flask/) <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15">
-* A lot of love 💖 and [Python](https://www.python.org/) 🐍
+
 
 
 <!-- GETTING STARTED -->
