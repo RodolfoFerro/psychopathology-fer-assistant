@@ -52,6 +52,9 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
+  * [Data Exploration](#data-exploration)
+  * [Model Training](#model-training)
+  * [Web Application](#web-application)
 * [Roadmap](#roadmap)
 * [License](#license)
 * [Contact](#contact)
@@ -71,11 +74,14 @@ Mental health is important. I will be adding a more detailed paragraph here, wit
 
 ### Built With
 
-With a lot of love 💖 and [Python](https://www.python.org/) 🐍, using:
+With a lot of love 💖, motivation to help others 💪🏼 and [Python](https://www.python.org/) 🐍, using:
 
-* [Tensorflow](https://www.tensorflow.org/) <img src="https://www.gstatic.com/devrel-devsite/prod/v9d570efc814a28024c8ff149d6de123f7f820fa81162ad936a6bcae349b1b74d/tensorflow/images/favicon.png" width="15">
 * [Flask](https://www.palletsprojects.com/p/flask/) <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15">
-
+* [MongoDB](https://www.mongodb.com/) <img src="https://www.mongodb.com/assets/images/global/favicon.ico" width="15">
+* [Tensorflow 2.0](https://www.tensorflow.org/) <img src="https://www.gstatic.com/devrel-devsite/prod/v9d570efc814a28024c8ff149d6de123f7f820fa81162ad936a6bcae349b1b74d/tensorflow/images/favicon.png" width="15">
+* [Google Colab](https://colab.research.google.com/) <img src="https://colab.research.google.com/img/favicon.ico" width="15"> (with its wonderful GPUs)
+* Model quantization with `tf.lite` for serving ⚙️
+* A [Raspberry Pi](https://www.raspberrypi.org/) Model 3B+ <img src="https://www.raspberrypi.org/homepage-9df4b/favicon.png" width="15">
 
 
 <!-- GETTING STARTED -->
@@ -109,6 +115,12 @@ pip install -r requirements.txt
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
+
+### Data Exploration
+
+### Model Training
+
+### Web Application
 
 
 <!-- ROADMAP -->
