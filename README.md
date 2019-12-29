@@ -93,10 +93,6 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* Virtual environment
-```bash
-<some-code>
-```
 
 ### Installation
 
@@ -104,17 +100,24 @@ This is an example of how to list things you need to use the software and how to
 ```bash
 git clone https://github.com/RodolfoFerro/psychopathology-fer-assistant.git
 ```
-2. Install requirements:
+2. Create a virtual environment with Python 3.7. (For this step I will assume that you are able to create a virtual environment with `virtualenv` or `conda`, but in any case you can check [Real Python's post about virtual environments](https://realpython.com/python-virtual-environments-a-primer/).)
+3. Install requirements using `pip`:
 ```bash
 pip install -r requirements.txt
 ```
 
+### Run the dashboard
+
+To run the dashboard you will need to get access to the MongoDB cluster by setting the `MONGO_URI` variable in the corresponding `db` file. Once you have done this and have installed the requirements, run the dashboard by running:
+```bash
+cd app
+python app.py
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 ### Data Exploration
-
 
 ### Model Training
 
@@ -139,9 +142,7 @@ The trained model architecture and quantized model with tflite (for the deployme
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-
 ### Web Application
-
 
 ### Model Serving
 
