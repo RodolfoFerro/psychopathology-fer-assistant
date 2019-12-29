@@ -118,7 +118,30 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ### Data Exploration
 
+
 ### Model Training
+
+After doing some research in the state of the art for Facial Expression Recognition tasks, I found that in "[Extended deep neural network for facial emotion recognition (EDNN)](https://www.sciencedirect.com/science/article/abs/pii/S016786551930008X)" by Deepak Kumar Jaina, Pourya Shamsolmoalib, and Paramjit Sehdev (Elsevier – Pattern Recognition Letters 2019) the proposed model turns out to achieve better results in classification tasks for Facial Expression Recognition, and by the architecture metrics this network turns out to be a more lightweight model compared with others (such as LeNet or Mobile Net).
+
+As part of the project development **I have implemented from zero the proposed model using Tensorflow 2.0**. For training I used the previously mentioned dataset from the "[Challenges in Representation Learning: Facial Expression Recognition Challenge](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)" by Kaggle. So far the model was trained **for only 10 epochs using a batch size of 132**. The training history can be seen in the following graphs:
+
+<center>
+<img src="assets/10_128_loss.png" width="40%">
+<img src="assets/10_128_acc.png" width="40%">
+</center>
+
+About the results, **the model has achieved with only 10 epochs an accuracy value of 0.4428 on the validation dataset**, with a result that could be part of the top 40 values in the [challenge leaderboard](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard). We can get a general idea of the model performance in the confussion matrix:
+
+<center>
+<img src="assets/10_128_cm.png" width="40%">
+</center>
+
+The trained model architecture and quantized model with tflite (for the deployment in the Raspberry Pi) can be found in the [model folder](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/model). Finally, if you want to re-train the model and verify the results by your own, or only if you have the curiosity to understand deeper the whole process of building and training the model with detail, checkout the notebook found in the same folder, or directly click on the following button to open it directly into Google Colab.
+
+<a href="https://colab.research.google.com/github/RodolfoFerro/psychopathology-fer-assistant/blob/master/model/Convolutional_model.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 
 ### Web Application
 
