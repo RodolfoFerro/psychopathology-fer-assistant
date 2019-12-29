@@ -55,6 +55,7 @@
   * [Data Exploration](#data-exploration)
   * [Model Training](#model-training)
   * [Web Application](#web-application)
+  * [Model Serving](#model-serving)
 * [Roadmap](#roadmap)
 * [License](#license)
 * [Contact](#contact)
@@ -112,10 +113,6 @@ pip install -r requirements.txt
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 ### Data Exploration
 
 
@@ -144,6 +141,9 @@ The trained model architecture and quantized model with tflite (for the deployme
 
 
 ### Web Application
+
+
+### Model Serving
 
 
 <!-- ROADMAP -->
