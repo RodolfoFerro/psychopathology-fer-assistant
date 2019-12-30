@@ -81,7 +81,7 @@ With a lot of love 💖, motivation to help others 💪🏼 and [Python](https:/
 * [Google Colab](https://colab.research.google.com/) <img src="https://colab.research.google.com/img/favicon.ico" width="15"> (with its wonderful GPUs)
 * Model quantization with `tf.lite` for serving ⚙️
 * A [Raspberry Pi](https://www.raspberrypi.org/) Model 3B+ <img src="https://www.raspberrypi.org/homepage-9df4b/favicon.png" width="15">
-* [Flask](https://www.palletsprojects.com/p/flask/) and [Dash]() <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15"> + <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" width="15">
+* A [Flask](https://www.palletsprojects.com/p/flask/) and [Dash](https://plot.ly/dash/) integration <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15"> + <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" width="15">
 * [MongoDB](https://www.mongodb.com/) <img src="https://www.mongodb.com/assets/images/global/favicon.ico" width="15">
 
 
