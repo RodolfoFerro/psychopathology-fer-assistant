@@ -1,4 +1,9 @@
 numpy
 matplotlib
+pymongo[srv]
 tensorflow
+wtforms
+flask
+dash
+dash-bootstrap-components
 

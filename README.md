@@ -81,8 +81,8 @@ With a lot of love 💖, motivation to help others 💪🏼 and [Python](https:/
 * [Google Colab](https://colab.research.google.com/) <img src="https://colab.research.google.com/img/favicon.ico" width="15"> (with its wonderful GPUs)
 * Model quantization with `tf.lite` for serving ⚙️
 * A [Raspberry Pi](https://www.raspberrypi.org/) Model 3B+ <img src="https://www.raspberrypi.org/homepage-9df4b/favicon.png" width="15">
-* A [Flask](https://www.palletsprojects.com/p/flask/) and [Dash](https://plot.ly/dash/) integration <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15"> + <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" width="15">
-* [MongoDB](https://www.mongodb.com/) <img src="https://www.mongodb.com/assets/images/global/favicon.ico" width="15">
+* A real-time [Flask](https://www.palletsprojects.com/p/flask/) and [Dash](https://plot.ly/dash/) integration (along with [Dash Bootstrap Components](https://dash-bootstrap-components.opensource.faculty.ai/)) <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15"> + <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" width="15">
+* [MongoDB](https://www.mongodb.com/) (with a cluster on MongoDB Atlas) <img src="https://www.mongodb.com/assets/images/global/favicon.ico" width="15">
 
 
 <!-- GETTING STARTED -->
@@ -146,7 +146,7 @@ As part of the project development **I have implemented from zero the proposed m
 <img src="assets/10_128_acc.png" width="40%">
 </center>
 
-About the results, **the model has achieved with only 10 epochs an accuracy value of 0.4428 on the validation dataset**, with a result that could be part of the top 40 values in the [challenge leaderboard](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard). We can get a general idea of the model performance in the confussion matrix:
+About the results, **the model has achieved an accuracy value of 0.4428 on the validation dataset with only 10 training epochs**, with a result that could be part of the top 40 scores in the [challenge leaderboard](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard). We can get a general idea of the model performance in the confussion matrix:
 
 <center>
 <img src="assets/10_128_cm.png" width="40%">
