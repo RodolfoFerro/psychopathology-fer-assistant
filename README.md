@@ -92,7 +92,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+This is an example of how to list things you need to use the software and how to install them. For this particular section I will suppose that you already have git installed on your system.
+
+For a general everview of the Raspberry Pi setup, you can check out my blog tutorial on [how to setup your Raspberry Pi Model B as Google Colab (Feb '19) to work with Tensorflow, Keras and OpenCV](https://rodolfoferro.xyz/Setup-your-Raspberry-Pi-as-Google-Colab/), **as those are the steps that we will follow**. In any case, this specific setup can be seen in the corresponding [rpi](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/rpi) folder.
 
 ### Installation
 
