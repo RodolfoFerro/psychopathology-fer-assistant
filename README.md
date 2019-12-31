@@ -125,7 +125,7 @@ The dataset used for this project is the one published in the "[Challenges in Re
 The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centered and occupies about the same amount of space in each image. The task is to categorize each face based on the emotion shown in the facial expression in to one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). A sample of the dataset can be seen in the next image.
 
 <center>
-<img src="assets/5.png" width="60%">
+<img src="assets/5.png" width="80%">
 </center>
 
 If you would like to see the data exploration process, checkout the notebook found in the [data folder](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/data), or click on the following button to open it directly into Google Colab.
@@ -148,7 +148,7 @@ As part of the project development **I have implemented from zero the proposed m
 Although the results may not seem quite good, **the model has achieved an accuracy value of 0.4738 on the validation dataset with only 12 training epochs**, with a result that could be part of the top 35 scores in the [challenge leaderboard](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard). We can get a general idea of the model performance in the confussion matrix:
 
 <center>
-<img src="assets/6.png" width="60%">
+<img src="assets/6.png" width="80%">
 </center>
 
 The trained model architecture and quantized model with tflite (for the deployment in the Raspberry Pi) can be found in the [model folder](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/model). Finally, if you want to re-train the model and verify the results by your own, or only if you have the curiosity to understand deeper the whole process of building and training the model with detail, checkout the notebook found in the same folder, or click on the following button to open it directly into Google Colab.
@@ -167,13 +167,13 @@ The trained model architecture and quantized model with tflite (for the deployme
 ### Web Application
 
 <center>
-<img src="assets/7.png" width="60%">>
+<img src="assets/7.png" width="80%">>
 </center>
 
 ### Model Serving
 
 <center>
-<img src="assets/8.png" width="60%">>
+<img src="assets/8.png" width="80%">>
 </center>
 
 <!-- ROADMAP -->
