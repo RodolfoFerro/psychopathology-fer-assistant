@@ -167,7 +167,7 @@ The trained model architecture and quantized model with tflite (for the deployme
 
 <a href="https://colab.research.google.com/github/RodolfoFerro/psychopathology-fer-assistant/blob/master/model/Convolutional_model.ipynb" target="_blank">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+</a><br>
 
 > ##### UPDATE:
 > I have trained the same model with a research database (the [Radboud Faces Database](http://www.socsci.ru.nl:8180/RaFD2/RaFD)) obtaining an accuracy of 0.9563 with 50 epochs, a learning rate of 0.00001 and a batch size of 128; after doing some pre-processing and data augmentation. Anyway, due the priacy of the database I won't be able to share more details abou this, but in any case PLEASE feel free to reach me at: <ferro@cimat.mx>
