@@ -83,7 +83,7 @@ With a lot of love 💖, motivation to help others 💪🏼 and [Python](https:/
 * A [Raspberry Pi](https://www.raspberrypi.org/) Model 3B+ <img src="https://www.raspberrypi.org/homepage-9df4b/favicon.png" width="15">
 * A real-time [Flask](https://www.palletsprojects.com/p/flask/) and [Dash](https://plot.ly/dash/) integration (along with [Dash Bootstrap Components](https://dash-bootstrap-components.opensource.faculty.ai/)) <img src="https://emojis.slackmojis.com/emojis/images/1501021338/314/flask.png" width="15"> + <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" width="15">
 * A real-time database, of course, from [Firebase](https://firebase.google.com/) <img src="http://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_96dp.png" width="15">
-
+* The [Kaggle API](https://github.com/Kaggle/kaggle-api) to get the dataset <img src="https://www.kaggle.com/static/images/favicon.ico" width="15">
 
 <!-- GETTING STARTED -->
 ## Getting Started

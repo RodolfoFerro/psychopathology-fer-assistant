@@ -49,7 +49,6 @@
   * [Installation](#installation)
 * [Usage](#usage)
   * [Running the Application](#running-the-application)
-* [Acknowledgements](#acknowledgements)
 
 
 <!-- GETTING STARTED -->
@@ -112,13 +111,16 @@ python main.py -h
 
 This outputs the following:
 ```
-usage: main.py [-h] [-c CLASSES] [-hc HAAR] [-hcp HAARPATH] [-rs RESIZING]
-               [-fs RESIZING] [-m MODEL] [-w WEIGHTS]
+usage: main.py [-h] [-c CLASSES] [-ch CHANNELS] [-hc HAAR] [-hcp HAARPATH]
+               [-rs RESIZING] [-fs FRAMESIZE] [-m MODEL] [-a API] [-au APIURL]
+               [-p PATIENT]
 
 optional arguments:
   -h, --help            show this help message and exit
   -c CLASSES, --classes CLASSES
                         Path to custom txt file containing classes.
+  -ch CHANNELS, --channels CHANNELS
+                        Number of channels for input image.
   -hc HAAR, --haar HAAR
                         Haar cascade to be used for face detection.
   -hcp HAARPATH, --haarpath HAARPATH
@@ -126,24 +128,20 @@ optional arguments:
   -rs RESIZING, --resizing RESIZING
                         Image width for resizing.
   -fs FRAMESIZE, --framesize FRAMESIZE
-                        Set frame size:
-                         (1) 640x360
-                         (2) 320x180
+                        Set frame size: (1) 640x360 (2) (320x180) (-1) (160,
+                        90)
   -m MODEL, --model MODEL
-                        Path to custom model in Keras' json format.
-  -w WEIGHTS, --weights WEIGHTS
-                        Path to custom weights in Keras' h5 format.
+                        Path to custom model in tflite format.
+  -a API, --api API     Send model response to API.
+  -au APIURL, --apiurl APIURL
+                        URL for API consumption.
+  -p PATIENT, --patient PATIENT
+                        Specify patient for API.
 ```
 
 With this, you can specify any path to any of the files to be used, or specify the resizing of the images to be processed by the neural net.
 
-An example (using some flags) to run the pre-trained network included in this repo would be the following:
+The basic example to run our trained model included in this repo would be the following:
 ```bash
-python main.py -c "classes.txt" -rs 48 -fs 2 -m "../model/base_model.json" -w "../model/base_model.h5"
+python main.py -ch 1 -fs 2 -m ../model/tf_model.tflite
 ```
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* For further details about this implementation, you can visit my visualization tool for FER tasks in the following repo: <https://github.com/RodolfoFerro/bistek-face>. You will notice that I have based this script from that previous version which does not include model serving with tflite nor quantized models, etc.

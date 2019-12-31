@@ -7,45 +7,35 @@ from app.fb import fetch_last
 def update_data(patient, emotions):
 	latest_data = fetch_last(db, 'fer')
 	latest_data = [entry.val() for entry in latest_data.each()][::-1]
-
-	if 0 < len(latest_data) < 20:
-		emotions['timestamp'].append(latest_data[-1]['timestamp'])
-		emotions['happiness'].append(latest_data[-1]['happiness'])
-		emotions['sadness'].append(latest_data[-1]['sadness'])
-	else:
-		for item in latest_data:
-			emotions['timestamp'].append(item['timestamp'])
-			emotions['happiness'].append(item['happiness'])
-			emotions['sadness'].append(item['sadness'])
+	
+	for item in latest_data:
+		emotions['timestamp'].append(item['timestamp'])
+		emotions['anger'].append(item['anger'])
+		emotions['disgust'].append(item['disgust'])
+		emotions['fear'].append(item['fear'])
+		emotions['happiness'].append(item['happiness'])
+		emotions['sadness'].append(item['sadness'])
+		emotions['surprise'].append(item['surprise'])
+		emotions['neutral'].append(item['neutral'])
 	
 	return
 
 
 def generate_figure(emotions):
+
 	return {
 		'data': [
 			dict(
 				x=np.array(emotions['timestamp']),
-				y=np.array(emotions['happiness']),
-				name='Happiness',
-				marker=dict(
-					color='rgb(55, 83, 109)'
-				),
+				y=np.array(emotions[key]),
+				name=f"{key}",
+				# marker=dict(
+				# 	color='rgb(55, 83, 109)'
+				# ),
 				line=dict(
 					shape='spline'
 				)
-			),
-			dict(
-				x=np.array(emotions['timestamp']),
-				y=np.array(emotions['sadness']),
-				name='Saddness',
-				marker=dict(
-					color='rgb(26, 118, 255)'
-				),
-				line=dict(
-					shape='spline'
-				)
-			)
+			) for key in emotions.keys() if key != 'timestamp'
 		],
 		'layout': dict(
 			title='General FER Activity',

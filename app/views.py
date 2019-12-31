@@ -27,18 +27,33 @@ from app.fb import fetch_last
 
 # Initialize dashboard data:
 timestamp = deque(maxlen=20)
+anger = deque(maxlen=20)
+disgust = deque(maxlen=20)
+fear = deque(maxlen=20)
 happiness = deque(maxlen=20)
 sadness = deque(maxlen=20)
+surprise = deque(maxlen=20)
+neutral = deque(maxlen=20)
 for i in range(20):
 	timestamp.append(datetime.now())
+	anger.append(0)
+	disgust.append(0)
+	fear.append(0)
 	happiness.append(0)
 	sadness.append(0)
+	surprise.append(0)
+	neutral.append(0)
 	sleep(0.01)
 
 emotions = {
 	'timestamp': timestamp,
+	'anger': anger,
+	'disgust': disgust,
+	'fear': fear,
 	'happiness': happiness,
-	'sadness': sadness
+	'sadness': sadness,
+	'surprise': surprise,
+	'neutral': neutral
 }
 
 # Update data from database:
