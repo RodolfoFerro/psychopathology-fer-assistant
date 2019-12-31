@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/dashboard.css">
+
+    <title>Psychopathology Assistant</title>
+  </head>
+  <body>
+	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<!-- <span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">&#9776;</span> -->
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="static/logo.png" height="45px">
+				Psychopathology Assistant
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto flex-nowrap mt-3 mt-md-0">
+					<li class="nav-item mr-sm-2">
+						<a class="nav-link btn btn-light text-dark" href="https://github.com/RodolfoFerro/psychopathology-fer-assistant" target="_blank">
+							<img src="https://emojis.slackmojis.com/emojis/images/1450822151/257/github.png" width="15px">
+							GitHub Repo
+						</a>
+					</li>
+					<li class="nav-item dropdown my-2 my-sm-0">
+						<a class="nav-link dropdown-toggle btn btn-danger" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Menu
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/patients">Patients</a>
+							<a class="dropdown-item" data-toggle="modal" data-target="#exampleModal">About</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/login">Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- Sidebar -->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="/patients">Patients</a>
+		<a href="/patients">Records</a>
+		<a href="/dashboard">Dashboard</a>
+	</div>
+
+	<!-- Jumbotron -->
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+		  <h1 class="display-4">Welcome to your patients folder!</h1>
+		  <p class="lead">In this section you will be able to access any patient's medical records.</p>
+		</div>
+	</div>
+
+	<!-- Patients -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+			  <div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Patient: John Doe</h4>
+					<p class="card-text">John has shown an altered perception of reality, including delusional thoughts, hallucinations, and disorganized speech and behaviour.</p>
+
+					<hr>
+					<h6>Diagnosis: Schizophrenia</h6>
+					<h6 class="align-right">Last session: 15/12/2019</h6>
+					<br>
+					<a href="#" class="btn btn-secondary">📂 Medical records</a>
+					<a href="/dashboard" class="btn btn-primary">📊 Patient dashboard</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-6">
+			  <div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Patient: Jannette Klein</h4>
+					<p class="card-text">John has shown an altered perception of reality, including delusional thoughts, hallucinations, and disorganized speech and behaviour.</p>
+
+					<hr>
+					<h6>Diagnosis: Anxiety Disorder</h6>
+					<h6 class="align-right">Last session: 15/12/2019</h6>
+					<br>
+					<a href="#" class="btn btn-secondary disabled">📂 Medical records</a>
+					<a href="/dashboard" class="btn btn-primary disabled">📊 Patient dashboard</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+			  <div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Patient: Mary Moe</h4>
+					<p class="card-text">John has shown an altered perception of reality, including delusional thoughts, hallucinations, and disorganized speech and behaviour.</p>
+
+					<hr>
+					<h6>Diagnosis: Drepression</h6>
+					<h6 class="align-right">Last session: 28/09/2019</h6>
+					<br>
+					<a href="#" class="btn btn-secondary disabled">📂 Medical records</a>
+					<a href="/dashboard" class="btn btn-primary disabled">📊 Patient dashboard</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-6">
+			  <div class="card">
+				<div class="card-body">
+					<h4 class="card-title">Patient: Richard Roe</h4>
+					<p class="card-text">John has shown an altered perception of reality, including delusional thoughts, hallucinations, and disorganized speech and behaviour.</p>
+
+					<hr>
+					<h6>Diagnosis: N/A</h6>
+					<h6 class="align-right">Last session: N/A</h6>
+					<br>
+					<a href="#" class="btn btn-secondary disabled">📂 Medical records</a>
+					<a href="/dashboard" class="btn btn-primary disabled">📊 Patient dashboard</a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">About this project</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				'''
+				#### General information
+
+				- **Patient:** John Doe
+				- **Since:** 09/09/2019
+				- **Last session:** 15/12/2019
+				- **Diagnosis:** schizophrenia
+				'''
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

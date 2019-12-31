@@ -48,89 +48,95 @@ update_data('John Doe', emotions)
 # Create dash + Bootstrap components:
 items = [
 	dbc.DropdownMenuItem(
-		children=[
-			html.A(
-				children=['Patients'],
-				href='/patients',
-				target='_parent',
-				className='text-dark',
-				style={'text-decoration': 'none'}
-			)
-		]
+		children=['Patients'],
+		href='/patients',
+		external_link=True
 	),
 	dbc.DropdownMenuItem(
-		children=[
-			html.A(
-				children=['About'],
-				href='#',
-				target='_parent',
-				className='text-dark',
-				style={'text-decoration': 'none'}
-			)
-		]
+		children=['About'],
+		href='#',
+		external_link=True,
+		id='open'
+	),
+	dbc.Modal(
+		[
+			dbc.ModalHeader('About this project'),
+			dbc.ModalBody(
+				children=[
+					dcc.Markdown(
+						'''
+						#### General information
+
+						- **Patient:** John Doe
+						- **Since:** 09/09/2019
+						- **Last session:** 15/12/2019
+						- **Diagnosis:** schizophrenia
+						'''
+					)
+				]
+			),
+			dbc.ModalFooter(
+				dbc.Button('Close', id='close', className='ml-auto')
+			),
+		],
+		id='modal',
+		size='lg',
+		scrollable=True
 	),
 	dbc.DropdownMenuItem(divider=True),
 	dbc.DropdownMenuItem(
-		children=[
-			html.A(
-				children=['Logout'],
-				href='/login',
-				target='_parent',
-				className='text-dark',
-				style={'text-decoration': 'none'}
-			)
-		]
+		children=['Logout'],
+		href='/login',
+		external_link=True
 	)
 ]
 
-dropdowns = html.Div(
-	[
-		dbc.DropdownMenu(
-			items,
-			label='Menu',
-			color='primary',
-			className='ml-1 flex-nowrap mt-3 mt-md-0',
-			right=True
-		)
-	],
-	style={"display": "flex", "flexWrap": "wrap"},
+dropdowns = dbc.DropdownMenu(
+	children=items,
+	label='Menu',
+	color='danger',
+	right=True,
+	className='nav-link btn btn-danger',
+	nav=True,
+	in_navbar=True,
+	style={'text-decoration': 'none', 'padding': '0', 'color': '#FFF'}
 )
 
-
-nav = dbc.Row(
+nav = dbc.Nav(
 	children=[
-		dbc.Nav(
+		dbc.NavItem(
 			children=[
 				dbc.NavLink(
 					children=[
-						dbc.Button(
-							children=[
-								html.Img(
-									src='https://emojis.slackmojis.com/emojis/images/1450822151/257/github.png',
-									style={
-										'width': '15px'
-									}
-								),
-								' GitHub Repo'
-							],
-							color='light',
-							className='mr-1'
-						)
+						html.Img(
+							src='https://emojis.slackmojis.com/emojis/images/1450822151/257/github.png',
+							style={
+								'width': '15px'
+							}
+						),
+						' GitHub Repo'
 					],
 					href='https://github.com/RodolfoFerro/psychopathology-fer-assistant/',
-					className='text-dark'
-				),
-				dbc.NavLink(
-					children=[dropdowns]
+					className='nav-link btn btn-light text-dark',
+					style={'margin-top': '9px'}
 				)
 			],
-			navbar=True,
-			justified=True
+			className='nav-item mr-sm-2'
+		),
+		dbc.NavItem(
+			children=[
+				dbc.NavLink(
+					children=[
+						dropdowns
+					],
+				)
+			],
+			className='nav-item dropdown my-2 my-sm-0',
+			style={'text-decoration': 'none', 'padding': '0'}
 		)
 	],
-	no_gutters=True,
-	className='ml-auto flex-nowrap mt-3 mt-md-0',
-	align='center',
+	className='navbar-nav navbar-expand-lg ml-auto flex-nowrap mt-3 mt-md-0',
+	navbar=True
 )
 
 navbar = dbc.Navbar(
@@ -157,11 +163,12 @@ navbar = dbc.Navbar(
 	],
 	color='dark',
 	dark=True,
-	sticky='top',
+	className='navbar navbar-expand-lg navbar-dark bg-dark'
 )
 
 jumbotron = dbc.Container(
 	children=[
+		html.Br(),
 		html.Br(),
 		dbc.Jumbotron(
 			children=[
@@ -220,11 +227,14 @@ fig = generate_figure(emotions)
 plot = dbc.Container(
 	children=[
 		html.Br(),
+		html.Br(),
 		dcc.Interval(id='timer', interval=1000),
 		dcc.Graph(
 			id='fer-graph',
 			figure=fig
-		)
+		),
+		html.Br(),
+		html.Br(),
 	]
 )
 
@@ -265,6 +275,17 @@ def toggle_navbar_collapse(n, is_open):
 		return not is_open
 	return is_open
 
+# Add callback for modal
+@app.callback(
+	Output('modal', 'is_open'),
+	[Input('open', 'n_clicks'), Input('close', 'n_clicks')],
+	[State('modal', 'is_open')],
+)
+def toggle_modal(n1, n2, is_open):
+	if n1 or n2:
+		return not is_open
+	return is_open
+
 
 # Add a callback to update plot
 @app.callback(output=Output('fer-graph', 'figure'),
@@ -292,7 +313,7 @@ def index():
 def patients():
 	"""Patients URL for app."""
 
-	return '<h1>Patients section</h1>'
+	return render_template('patients.html')
 
 
 @server.route('/login', methods=['GET', 'POST'])
@@ -313,7 +334,7 @@ def login():
 		password = form.password.data
 		if user == 'rodo_ferro' and password == 'admin':
 			session['user'] = user
-			return redirect('/dashboard')
+			return redirect('/patients')
 		else:
 			login_error = True
 	return render_template('login.html', login_error=login_error)

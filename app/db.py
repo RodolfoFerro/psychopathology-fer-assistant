@@ -1,7 +1,3 @@
-from datetime import datetime
-from random import random
-from time import sleep
-
 from pymongo import MongoClient
 
 
