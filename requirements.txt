@@ -2,6 +2,7 @@ numpy
 matplotlib
 pymongo[srv]
 tensorflow
+requests
 wtforms
 flask
 dash
