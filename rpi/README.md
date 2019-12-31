@@ -32,7 +32,7 @@
     <img src="https://img.shields.io/twitter/follow/FerroRodolfo?label=Twitter&logo=twitter&style=for-the-badge" alt="Twitter" height="25">
   </a>
 
-  <h3 align="center">Psychopathology Assistant<br>Raspberry Pi Setup</h3>
+  <h3 align="center">Psychopathology Assistant</h3>
   <p align="center">
     Because mental health matters.
     <br />
@@ -50,6 +50,9 @@
 * [Usage](#usage)
   * [Running the Application](#running-the-application)
 
+
+# Raspberry Pi Setup
+[![Raspberry Pi Setup][screenshot]](https://github.com/RodolfoFerro/psychopathology-fer-assistant)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -145,3 +148,6 @@ The basic example to run our trained model included in this repo would be the fo
 ```bash
 python main.py -ch 1 -fs 2 -m ../model/tf_model.tflite
 ```
+
+
+[screenshot]: ../assets/8.png
