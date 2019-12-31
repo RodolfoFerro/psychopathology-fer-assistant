@@ -182,11 +182,19 @@ The trained model architecture and quantized model with tflite (for the deployme
 <img src="assets/7.png" width="80%">
 </center>
 
+The web application is the base of interaction for the medical staff during the treatment sessions. This web platform aims to integrate a medical record for patients, and a realtime dashboard to make use of the AI power for the FER tasks during sessions.
+
+The platform has been entirely developed with Python on top of a Flask and Dash integration, along with Dash Bootstrap Components for a more intuitive interaction. The platform serves a real-time plot that is served through the trained model that is deployed on de Raspberry Pi, which sends the data in real-time to a real-time database that is Firebase hosted. The platform already includes a login view (`user: rodo_ferro`, `password: admin`) to access the dashboard and patients' records.
+
 ### Model Serving
+
+The following image illustrates a general idea of the model serving on the Raspberry Pi:
 
 <center>
 <img src="assets/8.png" width="80%">
 </center>
+
+Once that the model has been trained, saved, **quantized** and downloaded, the model has been ported into a Raspberry Pi model 3B+.
 
 <!-- ROADMAP -->
 ## Roadmap
