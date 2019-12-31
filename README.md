@@ -67,11 +67,23 @@
 
 [![P-FER Assistant][product-screenshot]](https://github.com/RodolfoFerro/psychopathology-fer-assistant)
 
-An intelligent assistant to track psychopathology patients responses during face-to-face and remote sessions.
+An intelligent assistant platform to track psychopathology patients responses during face-to-face and remote sessions.
+
+This platform makes use of a machine learning algorithm capable of tracking and detecting facial expressions to identify associated emotions through a camera. This allows the corresponding medical staff to take care of their patients by creating medical records supported by the artificial intelligent system, so they can follow-up the corresponding treatments.
 
 ### Motivation
 
-Mental health is important. I will be adding a more detailed paragraph here, with references and everything.
+Some facts:
+
+- Anxiety disorders, Mood disorders, Schizophrenia and psychotic disorders, Dementia...
+- Over 50 percent of all people who die by suicide suffer from major depression
+- Most of these disorders are treated primarily through medications and psychotherapy
+- As you may have had, **I have had depression** and I can only ask to my self "what are we doing to help others avoid or decrease their suffering?"
+
+##### Mental health is important.
+
+And as I have mentioned, **most of these disorders are treated primarily through medications and psychotherapy**, and tracking the emotional responses of the patients during psychoterapy sessions may result important as this reveals progress on their treatment. This is why I am trying to help with this AI based platform.
+
 
 ### Built With
 
@@ -167,32 +179,24 @@ The trained model architecture and quantized model with tflite (for the deployme
 ### Web Application
 
 <center>
-<img src="assets/7.png" width="80%">>
+<img src="assets/7.png" width="80%">
 </center>
 
 ### Model Serving
 
 <center>
-<img src="assets/8.png" width="80%">>
+<img src="assets/8.png" width="80%">
 </center>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- What will come next?
-
-
-
-<!-- CONTRIBUTING -->
-<!-- ## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request -->
+- Develop own embedded device for the model deployment (which should already include a camera)
+- Improve user data aquisition through the real-time service
+- Add medical recording to database
+- Implement patients' medical records analytics
+- Add security metrics for medical records
+- **Test prototype with a psychologist/psychiatrist**
 
 
 <!-- LICENSE -->
@@ -208,6 +212,8 @@ Rodolfo Ferro - [@FerroRodolfo](https://twitter.com/FerroRodolfo) - rodolfoferro
 
 Project Link: [https://github.com/RodolfoFerro/psychopathology-fer-assistant](https://github.com/RodolfoFerro/psychopathology-fer-assistant)
 
+IF YOU THINK THAT YOU CAN HELP ME TO HELP OTHERS, PLEASE DO NOT HESITATE TO CONTACT ME.
+
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -215,6 +221,8 @@ Project Link: [https://github.com/RodolfoFerro/psychopathology-fer-assistant](ht
 * Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/)
 * Icons made by [Flat Icons](https://www.flaticon.com/authors/flat-icons) from [www.flaticon.com](https://www.flaticon.com/)
 * Icons made by [Becris](https://www.flaticon.com/authors/becris) from [www.flaticon.com](https://www.flaticon.com/)
+* Thanks to the Tensorflow team for developing such an incredible technology
+* I am a huge fan of [@DynamicWebPaige](https://twitter.com/DynamicWebPaige), she rocks
 
 
 
