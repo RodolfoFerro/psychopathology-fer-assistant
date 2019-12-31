@@ -125,7 +125,7 @@ The dataset used for this project is the one published in the "[Challenges in Re
 The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centered and occupies about the same amount of space in each image. The task is to categorize each face based on the emotion shown in the facial expression in to one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). A sample of the dataset can be seen in the next image.
 
 <center>
-<img src="assets/fer2013.png" width="50%">
+<img src="assets/5.png" width="60%">
 </center>
 
 If you would like to see the data exploration process, checkout the notebook found in the [data folder](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/data), or click on the following button to open it directly into Google Colab.
@@ -137,19 +137,18 @@ If you would like to see the data exploration process, checkout the notebook fou
 
 ### Model Training
 
-After doing some research in the state of the art for Facial Expression Recognition tasks, I found that in "[Extended deep neural network for facial emotion recognition (EDNN)](https://www.sciencedirect.com/science/article/abs/pii/S016786551930008X)" by Deepak Kumar Jaina, Pourya Shamsolmoalib, and Paramjit Sehdev (Elsevier – Pattern Recognition Letters 2019) the proposed model turns out to achieve better results in classification tasks for Facial Expression Recognition, and by the architecture metrics this network turns out to be a more lightweight model compared with others (such as LeNet or Mobile Net).
+After doing some research in the state of the art for Facial Expression Recognition tasks, I found that in "[Extended deep neural network for facial emotion recognition (EDNN)](https://www.sciencedirect.com/science/article/abs/pii/S016786551930008X)" by Deepak Kumar Jaina, Pourya Shamsolmoalib, and Paramjit Sehdev (Elsevier – Pattern Recognition Letters 2019), the proposed model turns out to achieve better results in classification tasks for Facial Expression Recognition, and by the architecture metrics this network turns out to be a more lightweight model compared with others (such as LeNet or Mobile Net).
 
-As part of the project development **I have implemented from zero the proposed model using Tensorflow 2.0**. For training I used the previously mentioned dataset from the "[Challenges in Representation Learning: Facial Expression Recognition Challenge](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)" by Kaggle. So far the model was trained **for only 10 epochs using a batch size of 132**. The training history can be seen in the following graphs:
+As part of the project development **I have implemented from zero the proposed model using Tensorflow 2.0**. For training I used the previously mentioned dataset from the "[Challenges in Representation Learning: Facial Expression Recognition Challenge](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)" by Kaggle **on a Google Colab environment using GPUs**. So far the model was trained **for only 12 epochs using a batch size of 64**. The training history can be seen in the following graphs:
 
 <center>
-<img src="assets/10_128_loss.png" width="40%">
-<img src="assets/10_128_acc.png" width="40%">
+<img src="assets/10_128_loss.png" width="40%"><img src="assets/10_128_acc.png" width="40%">
 </center>
 
-About the results, **the model has achieved an accuracy value of 0.4738 on the validation dataset with only 10 training epochs**, with a result that could be part of the top 35 scores in the [challenge leaderboard](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard). We can get a general idea of the model performance in the confussion matrix:
+Although the results may not seem quite good, **the model has achieved an accuracy value of 0.4738 on the validation dataset with only 12 training epochs**, with a result that could be part of the top 35 scores in the [challenge leaderboard](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard). We can get a general idea of the model performance in the confussion matrix:
 
 <center>
-<img src="assets/10_128_cm.png" width="40%">
+<img src="assets/6.png" width="60%">
 </center>
 
 The trained model architecture and quantized model with tflite (for the deployment in the Raspberry Pi) can be found in the [model folder](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/model). Finally, if you want to re-train the model and verify the results by your own, or only if you have the curiosity to understand deeper the whole process of building and training the model with detail, checkout the notebook found in the same folder, or click on the following button to open it directly into Google Colab.
@@ -158,10 +157,24 @@ The trained model architecture and quantized model with tflite (for the deployme
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
+> ##### UPDATE:
+> I have trained the same model with a research database (the [Radboud Faces Database](http://www.socsci.ru.nl:8180/RaFD2/RaFD)) obtaining an accuracy of 0.9563 with 50 epochs, a learning rate of 0.00001 and a batch size of 128; after doing some pre-processing and data augmentation. Anyway, due the priacy of the database I won't be able to share more details abou this, but in any case PLEASE feel free to reach me at: <ferro@cimat.mx>
+>
+> As you may wonder about the results, the training history and the confusion matrix may illustrate more about them:
+>
+> <img src="assets/50_acc.png" width="30%"><img src="assets/50_cm.png" width="20%">
+
 ### Web Application
+
+<center>
+<img src="assets/7.png" width="60%">>
+</center>
 
 ### Model Serving
 
+<center>
+<img src="assets/8.png" width="60%">>
+</center>
 
 <!-- ROADMAP -->
 ## Roadmap
