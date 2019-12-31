@@ -14,7 +14,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_bootstrap_components as dbc
 
-from app import fer
+from app import db
 from app import app
 from app import server
 from app.forms import LoginForm
@@ -22,7 +22,7 @@ from app.hasher import hash_password
 from app.hasher import verify_password_hash
 from app.data_fig import generate_figure
 from app.data_fig import update_data
-from app.db import db_fetch_last
+from app.fb import fetch_last
 
 
 # Initialize dashboard data:

@@ -1,13 +1,18 @@
 from flask import Flask
 from dash import Dash
 import dash_bootstrap_components as dbc
-
-from app.db import db_connect_collection
-from app.db import MONGO_URI
+import pyrebase
 
 
-# Connect to MongoDB:
-fer = db_connect_collection(MONGO_URI, 'psychofer', 'fer')
+# Connect to Firebase:
+config = {
+  "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "authDomain": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.firebaseapp.com",
+  "databaseURL": "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.firebaseio.com/",
+  "storageBucket": "gs://XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.appspot.com"
+}
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
 
 # Create a Flask server:
 server = Flask(__name__)
@@ -22,5 +27,4 @@ app = Dash(__name__,
 
 if __name__ == '__main__':
 	from views import *
-	from endpoints import *
 	app.run_server(debug=True)

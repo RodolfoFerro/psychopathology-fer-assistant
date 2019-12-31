@@ -1,5 +1,9 @@
 # Extra files
 model/*.h5
+model/*_rfdb.*
+rpi/*_rfdb.*
+assets/*_rfdb.*
+secret.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

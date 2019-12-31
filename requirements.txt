@@ -1,8 +1,9 @@
 numpy
+psutil
 matplotlib
-pymongo[srv]
 tensorflow
-requests
+opencv-python
+pyrebase
 wtforms
 flask
 dash

@@ -1,12 +1,12 @@
 import numpy as np
 
-from app import fer
-from app.db import db_fetch_last
+from app import db
+from app.fb import fetch_last
 
 
 def update_data(patient, emotions):
-	latest_data = db_fetch_last(fer, patient)
-	latest_data = list(latest_data)[::-1]
+	latest_data = fetch_last(db, 'fer')
+	latest_data = [entry.val() for entry in latest_data.each()][::-1]
 
 	if 0 < len(latest_data) < 20:
 		emotions['timestamp'].append(latest_data[-1]['timestamp'])
