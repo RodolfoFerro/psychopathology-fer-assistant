@@ -194,7 +194,30 @@ The following image illustrates a general idea of the model serving on the Raspb
 <img src="assets/8.png" width="80%">
 </center>
 
-Once that the model has been trained, saved, **quantized** and downloaded, the model has been ported into a Raspberry Pi model 3B+.
+Once that the model has been trained, saved, **quantized** and downloaded, the model has been ported into a Raspberry Pi model 3B+. The Rapberry Pi connects directly to the real-time database in Firebase to send the data as the deployed model predicts.
+
+The script that serves as the interface between the Raspberry Pi and the database is capable of printing metrics of the model performance as well as the device performace during the time the model is serving its results. In general, **the served model with tflite takes only ~3% of the Raspberry Pi CPU and the time of prediction is in the range (0.005, 0.015)**, as you may see in the following example of its output:
+```
+ * Time for face 0 det.: 0.0017399787902832031
+ * Time for prediction: 0.0062448978424072266
+ * Process ID: 50495
+ * Memory 2.8620%
+ * Emotion: Neutral
+
+ * Time for face 0 det.: 0.0023512840270996094
+ * Time for prediction: 0.0059719085693359375
+ * Process ID: 50495
+ * Memory 2.8629%
+ * Emotion: Neutral
+
+ * Time for face 0 det.: 0.0016210079193115234
+ * Time for prediction: 0.006102085113525391
+ * Process ID: 50495
+ * Memory 2.8629%
+ * Emotion: Neutral
+```
+
+The complete details on how to setup a Raspberry Pi and how to run the Python script to communicate with Firebase can be found inside the [rpi](https://github.com/RodolfoFerro/psychopathology-fer-assistant/tree/master/rpi) folder.
 
 <!-- ROADMAP -->
 ## Roadmap
