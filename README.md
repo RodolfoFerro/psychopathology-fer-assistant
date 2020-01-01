@@ -36,7 +36,7 @@
   <p align="center">
     Because mental health matters.
     <br />
-    <a href="https://github.com/RodolfoFerro/psychopathology-fer-assistant"><strong>View the demo »</strong></a>
+    <a href="https://youtu.be/Y1DfFQbkmYM"><strong>View the demo »</strong></a>
     <br />
   </p>
 </p>
@@ -65,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![P-FER Assistant][product-screenshot]](https://github.com/RodolfoFerro/psychopathology-fer-assistant)
+[![Psychopathology Assistant](https://img.youtube.com/vi/Y1DfFQbkmYM/0.jpg)](https://www.youtube.com/watch?v=Y1DfFQbkmYM)
 
 An intelligent assistant platform to track psychopathology patients responses during face-to-face and remote sessions.
 
@@ -255,8 +255,3 @@ IF YOU THINK THAT YOU CAN HELP ME TO HELP OTHERS, PLEASE DO NOT HESITATE TO CONT
 * Thanks to the Tensorflow team for developing such an incredible technology
 * I am a huge fan of [@DynamicWebPaige](https://twitter.com/DynamicWebPaige), she rocks
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: assets/screenshot.png

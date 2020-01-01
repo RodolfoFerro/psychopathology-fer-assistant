@@ -123,7 +123,6 @@ def viewer(fs, model):
     interpreter = model['interpreter']
     input_details = model['input_details']
     output_details = model['output_details']
-    delay = 3
 
     while(True):
         # Capture frame-by-frame:
