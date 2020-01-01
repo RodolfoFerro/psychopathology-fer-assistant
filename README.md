@@ -119,6 +119,7 @@ git clone https://github.com/RodolfoFerro/psychopathology-fer-assistant.git
 ```bash
 pip install -r requirements.txt
 ```
+4. You may also need to create your own real-time database on Firebase and set the corresponding configuration variables on the `app/__init__.py` and `rpi/main.py` files.
 
 ### Run the dashboard
 
