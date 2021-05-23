@@ -12,12 +12,7 @@ import cv2
 
 
 # Connect to Firebase:
-config = {
-  "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "authDomain": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.firebaseapp.com",
-  "databaseURL": "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.firebaseio.com/",
-  "storageBucket": "gs://XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.appspot.com"
-}
+config = {}
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
@@ -68,7 +63,7 @@ def parser():
                     help="Path to Haar cascades for face detection.")
     ap.add_argument("-rs", "--resizing", type=int, default=48,
                     help="Image width for resizing.")
-    ap.add_argument("-fs", "--framesize", type=int, default=-1,
+    ap.add_argument("-fs", "--framesize", type=int, default=1,
                     help="Set frame size: \n (1) 640x360 \n (2) (320x180) (-1) (160, 90)")
     ap.add_argument("-m", "--model", type=str,
                     default="../model/tf_model.tflite",

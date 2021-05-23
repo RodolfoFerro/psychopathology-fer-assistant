@@ -5,12 +5,7 @@ import pyrebase
 
 
 # Connect to Firebase:
-config = {
-  "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "authDomain": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.firebaseapp.com",
-  "databaseURL": "https://XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.firebaseio.com/",
-  "storageBucket": "gs://XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.appspot.com"
-}
+config = {}
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
@@ -20,11 +15,11 @@ server.config.from_pyfile('config.py')
 
 # Create a Dash app:
 app = Dash(__name__,
-		   server=server,
-		   routes_pathname_prefix='/dashboard/',
-		   external_stylesheets=[dbc.themes.BOOTSTRAP])
+            server=server,
+            routes_pathname_prefix='/dashboard/',
+            external_stylesheets=[dbc.themes.LUX])
 
 
 if __name__ == '__main__':
-	from views import *
-	app.run_server(debug=True)
+    from views import *
+    app.run_server(debug=True)

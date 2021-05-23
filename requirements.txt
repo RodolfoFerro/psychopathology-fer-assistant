@@ -1,11 +1,11 @@
-numpy
+numpy==1.19.2
 psutil
 matplotlib
-tensorflow
+tensorflow==2.4
 opencv-python
 pyrebase
 wtforms
 flask
 dash
 dash-bootstrap-components
-
+jwt
