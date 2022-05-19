@@ -28,8 +28,8 @@
   <a href="https://www.linkedin.com/in/rodolfoferro/">
     <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" alt="LinkedIn" height="25">
   </a>
-  <a href="https://twitter.com/FerroRodolfo/">
-    <img src="https://img.shields.io/twitter/follow/FerroRodolfo?label=Twitter&logo=twitter&style=for-the-badge" alt="Twitter" height="25">
+  <a href="https://twitter.com/rodo_ferro/">
+    <img src="https://img.shields.io/twitter/follow/rodo_ferro?label=Twitter&logo=twitter&style=for-the-badge" alt="Twitter" height="25">
   </a>
 
   <h3 align="center">Psychopathology Assistant</h3>
@@ -240,7 +240,7 @@ Distributed under a GPLv3 License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Rodolfo Ferro - [@FerroRodolfo](https://twitter.com/FerroRodolfo) - rodolfoferroperez@gmail.com
+Rodolfo Ferro - [@rodo_ferro](https://twitter.com/rodo_ferro) - rodolfoferroperez@gmail.com
 
 Project Link: [https://github.com/RodolfoFerro/psychopathology-fer-assistant](https://github.com/RodolfoFerro/psychopathology-fer-assistant)
 
